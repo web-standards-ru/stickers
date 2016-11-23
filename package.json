@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "prince": "^1.2.1"
+  }
+}

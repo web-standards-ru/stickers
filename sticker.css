@@ -1,0 +1,72 @@
+/* sticker */
+
+.sticker {
+	box-sizing: border-box;
+	float: left;
+	padding: 4.1mm 0 0 4.3mm;
+	width: 65mm;
+	height: 36mm;
+	border: solid 0.1mm #fff;
+	font-family: Ubuntu, sans-serif;
+	}
+.sticker:empty {
+	border-color: #000;
+	}
+
+/* Full */
+
+.sticker__full {
+	margin: 0 0 1.8mm 0;
+	color: #406f88;
+	font-weight: 400;
+	font-size: 15pt;
+	}
+
+/* Name */
+
+.sticker__name {
+	display: block;
+	}
+.sticker__name:empty:nth-of-type(1) {
+	position: relative;
+	top: -2mm;
+	}
+.sticker__name:empty::before {
+	content: '...........................................';
+	}
+
+/* Twitter */
+
+.sticker__twitter {
+	margin: 0 0 2.5mm -1mm;
+	color: #469bbb;
+	font-size: 15pt;
+	}
+.sticker__twitter::before {
+	content: '@';
+	}
+.sticker__twitter:empty::before {
+	content: '@........................................';
+	}
+
+/* City */
+
+.sticker::after {
+	display: block;
+	color: #406f88;
+	font-weight: 200;
+	font-size: 10pt;
+	content: 'Город — 3000';
+	}
+.sticker:empty::after {
+	content: '';
+	}
+
+/* Print */
+
+@media print {
+	.sticker {
+		-webkit-print-color-adjust: exact;
+		text-rendering: geometricPrecision;
+		}
+	}
