@@ -20,12 +20,23 @@
 			src: url(fonts/ubuntu-light.woff) format('woff');
 		}
 
-		/* Print */
+		/* Page */
 
-		.page {
-			width: 420mm;
-			height: 297mm;
+		@media not print {
+			html {
+				background-color: grey;
+			}
+
+			body {
+				background-color: white;
+				display: flow-root;
+				padding: 4.5mm 0 0 15mm;
+				width: 420mm;
+				box-sizing: border-box;
+			}
 		}
+
+		/* Print */
 
 		@page {
 			margin: 4.5mm 0 0 15mm;
@@ -34,7 +45,7 @@
 	</style>
 	<link rel="stylesheet" href="sticker.css">
 </head>
-<body class="page">
+<body>
 
 	<article class="sticker"></article>
 	<article class="sticker"></article>
