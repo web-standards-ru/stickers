@@ -1,6 +1,10 @@
 {
   "private": true,
   "dependencies": {
-    "prince": "^1.2.1"
+    "prince": "^1.2.1",
+    "browser-sync": "^2.18.13"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --no-notify --no-ui --files 'index.html, sticker.css'"
   }
 }
